@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'chatBox.dart';
 
 void main() {
   return runApp(
@@ -227,292 +228,78 @@ class _MessengerHomeState extends State<MessengerHome> {
                   ),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: ListView(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Expanded(
-                              flex: 2,
-                              child: CircleAvatar(
-                                backgroundColor: Colors.blue[100],
-                                radius: 40,
-                                child: Text('Contact'),
-                              ),
-                            ),
-                            Expanded(
-                              flex: 7,
-                              child: Container(
-                                // color: Colors.red,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(10.0),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text(
-                                          'Cristina',
-                                          style: TextStyle(
-                                            color: Colors.black54,
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text(
-                                          'Me too, thanks!',
-                                          style: TextStyle(
-                                            color: Colors.black87,
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
+                      FlatButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => chatBox()),
+                          );
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            // color: Colors.teal[100],
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Expanded(
+                                  flex: 2,
+                                  child: CircleAvatar(
+                                    backgroundColor: Colors.blue[100],
+                                    radius: 40,
+                                    child: Text('Contact'),
                                   ),
                                 ),
-                              ),
-                            ),
-                            Expanded(
-                              flex: 1,
-                              child: Text('Fri'),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Expanded(
-                              flex: 2,
-                              child: CircleAvatar(
-                                backgroundColor: Colors.blue[100],
-                                radius: 40,
-                                child: Text('Contact'),
-                              ),
-                            ),
-                            Expanded(
-                              flex: 7,
-                              child: Container(
-                                // color: Colors.red,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(10.0),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text(
-                                          'Cristina',
-                                          style: TextStyle(
-                                            color: Colors.black54,
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w500,
+                                Expanded(
+                                  flex: 7,
+                                  child: Container(
+                                    // color: Colors.red,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(10.0),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Text(
+                                              'Cristina',
+                                              style: TextStyle(
+                                                color: Colors.black54,
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
                                           ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text(
-                                          'Me too, thanks!',
-                                          style: TextStyle(
-                                            color: Colors.black87,
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w500,
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Text(
+                                              'Me too, thanks!',
+                                              style: TextStyle(
+                                                color: Colors.black87,
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
                                           ),
-                                        ),
+                                        ],
                                       ),
-                                    ],
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ),
-                            Expanded(
-                              flex: 1,
-                              child: Text('Fri'),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Expanded(
-                              flex: 2,
-                              child: CircleAvatar(
-                                backgroundColor: Colors.blue[100],
-                                radius: 40,
-                                child: Text('Contact'),
-                              ),
-                            ),
-                            Expanded(
-                              flex: 7,
-                              child: Container(
-                                // color: Colors.red,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(10.0),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text(
-                                          'Cristina',
-                                          style: TextStyle(
-                                            color: Colors.black54,
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text(
-                                          'Me too, thanks!',
-                                          style: TextStyle(
-                                            color: Colors.black87,
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
+                                Expanded(
+                                  flex: 1,
+                                  child: Text('Fri'),
                                 ),
-                              ),
+                              ],
                             ),
-                            Expanded(
-                              flex: 1,
-                              child: Text('Fri'),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Expanded(
-                              flex: 2,
-                              child: CircleAvatar(
-                                backgroundColor: Colors.blue[100],
-                                radius: 40,
-                                child: Text('Contact'),
-                              ),
-                            ),
-                            Expanded(
-                              flex: 7,
-                              child: Container(
-                                // color: Colors.red,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(10.0),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text(
-                                          'Cristina',
-                                          style: TextStyle(
-                                            color: Colors.black54,
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text(
-                                          'Me too, thanks!',
-                                          style: TextStyle(
-                                            color: Colors.black87,
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Expanded(
-                              flex: 1,
-                              child: Text('Fri'),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Expanded(
-                              flex: 2,
-                              child: CircleAvatar(
-                                backgroundColor: Colors.blue[100],
-                                radius: 40,
-                                child: Text('Contact'),
-                              ),
-                            ),
-                            Expanded(
-                              flex: 7,
-                              child: Container(
-                                // color: Colors.red,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(10.0),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text(
-                                          'Cristina',
-                                          style: TextStyle(
-                                            color: Colors.black54,
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text(
-                                          'Me too, thanks!',
-                                          style: TextStyle(
-                                            color: Colors.black87,
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Expanded(
-                              flex: 1,
-                              child: Text('Fri'),
-                            ),
-                          ],
+                          ),
                         ),
                       ),
                     ],
